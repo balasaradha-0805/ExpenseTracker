@@ -58,7 +58,7 @@ function addtransaction(){
     document.querySelector('input[name="type"][value="expense"]').checked = true;
 }
 
-sub_btn.addEventListener("submit", function(event){
+form.addEventListener("submit", function(event){
     event.preventDefault();
     addtransaction();
 })

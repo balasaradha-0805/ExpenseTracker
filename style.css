@@ -80,7 +80,7 @@ input,select,button{
 }
 .transaction-form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 16px;
 }
 
@@ -96,9 +96,7 @@ button{
 }
 
 .transactions{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  
     padding: 15px;
     border-bottom: 1px solid #ddd;
 }
@@ -117,7 +115,32 @@ button{
 .expense{
     color: red;
 }
+#transaction-list{
+    margin: 50px;
+      display: grid;
+   grid-template-columns: 1fr;
+    gap: 12px;
+}
 
+.transaction > div:last-child {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    justify-items: start;
+}
+.delete-button {
+    width: auto;
+    padding: 9px 14px;
+    background: #8b5e3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background: #6f4529;
+}
 @media(max-width:700px){
     .summary {
         grid-template-columns: 1fr;
